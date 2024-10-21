@@ -24,7 +24,7 @@ To access certain API endpoints, you need to authenticate as a user. Follow thes
        "username": "your_username",
        "password": "your_password"
    }
-```json
+
    Response:
    {
        "refresh": "your_refresh_token",
