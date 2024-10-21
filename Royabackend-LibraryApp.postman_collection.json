@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "8adab7ff-cd96-4b16-b05a-9495dbb52ace",
+		"name": "Royabackend/LibraryApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25275945",
+		"_collection_link": "https://gold-trinity-679703.postman.co/workspace/Team-Workspace~2088ded3-af0f-456b-8b0c-70ba71bbeabb/collection/25275945-8adab7ff-cd96-4b16-b05a-9495dbb52ace?action=share&source=collection_link&creator=25275945"
+	},
+	"item": [
+		{
+			"name": "User Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"omar\",\n    \"password\": \"omar1234\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://165.232.126.71:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"165",
+						"232",
+						"126",
+						"71"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create a New Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTQxNjc4LCJpYXQiOjE3Mjk1NDEzNzgsImp0aSI6IjJjODg4Y2UyMmU3ZTQ4ZTdiMmFiMzZlZmVmNjI3ZDUzIiwidXNlcl9pZCI6MX0.jcK3I7S9yhv9NqEcV0qbXVDi-NzgzBFOrng_e9kCbHU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Book Title\",\n    \"author\": \"Author Name\",\n    \"description\": \"This is a brief description of the new book.\",\n    \"available_copies\": 5\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://165.232.126.71:8000/api/books/",
+					"protocol": "http",
+					"host": [
+						"165",
+						"232",
+						"126",
+						"71"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://165.232.126.71:8000/api/books/",
+					"protocol": "http",
+					"host": [
+						"165",
+						"232",
+						"126",
+						"71"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Single Book by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://165.232.126.71:8000/api/books/{id}/",
+					"protocol": "http",
+					"host": [
+						"165",
+						"232",
+						"126",
+						"71"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"{id}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update an Existing Book",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTQxMTg5LCJpYXQiOjE3Mjk1NDA4ODksImp0aSI6IjJmYmQxMmM3NGFhMDQ4ZDk4ZjVjMTNhMTk2NGM0ODk3IiwidXNlcl9pZCI6MX0.5HFaMdO4BHBMW4uyy8fR6hsHysV-v_SzkNCD2q_MZvg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Updated Book Title\",\n    \"author\": \"Updated Author Name\",\n    \"description\": \"This is an updated description of the book.\",\n    \"available_copies\": 10\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://165.232.126.71:8000/api/books/{id}/",
+					"protocol": "http",
+					"host": [
+						"165",
+						"232",
+						"126",
+						"71"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"{id}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Update a Book Partially",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTQxMTg5LCJpYXQiOjE3Mjk1NDA4ODksImp0aSI6IjJmYmQxMmM3NGFhMDQ4ZDk4ZjVjMTNhMTk2NGM0ODk3IiwidXNlcl9pZCI6MX0.5HFaMdO4BHBMW4uyy8fR6hsHysV-v_SzkNCD2q_MZvg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Updated by patch Book Title\",\n    \"description\": \"Updated description of the book.\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://165.232.126.71:8000/api/books/{id}/",
+					"protocol": "http",
+					"host": [
+						"165",
+						"232",
+						"126",
+						"71"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"{id}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a Book by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTQxNjc4LCJpYXQiOjE3Mjk1NDEzNzgsImp0aSI6IjJjODg4Y2UyMmU3ZTQ4ZTdiMmFiMzZlZmVmNjI3ZDUzIiwidXNlcl9pZCI6MX0.jcK3I7S9yhv9NqEcV0qbXVDi-NzgzBFOrng_e9kCbHU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://165.232.126.71:8000/api/books/1/",
+					"protocol": "http",
+					"host": [
+						"165",
+						"232",
+						"126",
+						"71"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
