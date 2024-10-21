@@ -24,11 +24,12 @@ To access certain API endpoints, you need to authenticate as a user. Follow thes
        "username": "your_username",
        "password": "your_password"
    }
-Response:
-{
-    "refresh": "your_refresh_token",
-    "access": "your_access_token"
-}
+```json
+   Response:
+   {
+       "refresh": "your_refresh_token",
+       "access": "your_access_token"
+   }
 
 Use the Access Token: For endpoints that require authorization, include the token in the Authorization header:
 
