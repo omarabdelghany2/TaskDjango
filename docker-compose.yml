@@ -1,0 +1,37 @@
+
+
+services:
+  web:
+    build:
+      context: ./Backend  # Set the context to the Backend directory so it has access to Pipfile
+      dockerfile: RoyaBackend/Dockerfile  # Explicitly point to the Dockerfile inside RoyaBackEnd
+    container_name: roya_backend
+    volumes:
+      - ./Backend/RoyaBackend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    command: >
+        sh -c "
+          pipenv install --skip-lock &&
+          pipenv run python manage.py makemigrations &&
+          pipenv run python manage.py migrate &&
+          pipenv run python manage.py collectstatic --noinput &&
+          pipenv run python manage.py runserver 0.0.0.0:8000
+        "
+
+  db:
+    image: postgres:13
+    container_name: roya_db
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
