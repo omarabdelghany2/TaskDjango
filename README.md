@@ -110,6 +110,8 @@ Book Management
         Method: POST
         Authorization: Required
         Body:
+        ```json
+        
         {
            "book_id": 1
         }
