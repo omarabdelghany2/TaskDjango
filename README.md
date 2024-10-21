@@ -27,7 +27,7 @@ This documentation outlines the available API endpoints for the Roya Backend app
 
 All endpoints can be accessed through the following base URL:
 
-http://165.232.126.71:8000/api/
+http://165.232.126.71:8000
 
 
 ## Authentication
