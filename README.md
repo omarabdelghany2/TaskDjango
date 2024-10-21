@@ -1,5 +1,9 @@
 # API Documentation for Roya Backend
 
+
+Deployment URL :
+http://165.232.126.71:8000/
+
 ## Overview
 
 This documentation outlines the available API endpoints for the Roya Backend application. The API is built using Django REST Framework and provides functionalities for user authentication, book management, and borrowing reports.
