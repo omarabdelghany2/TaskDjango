@@ -55,10 +55,10 @@ Use the Access Token: For endpoints that require authorization, include the toke
 Authorization: Bearer your_access_token
 
 
-API Endpoints
+## API Endpoints
 
 User Management
-    Register a New User
+   ### Register a New User
         Endpoint: /register/
         Method: POST
         Body:
@@ -71,7 +71,7 @@ User Management
               Response: Returns details of the created user.
   
   
-  Login User
+  ### Login User
         Endpoint: /login/
         Method: POST
          Body:
