@@ -82,8 +82,8 @@ User Management
             "password": "your_password"
         }
 
-Book Management
-    Get All Books
+## Book Management
+   ### Get All Books
         Endpoint: /books/
         Method: GET
         Authorization: Required
