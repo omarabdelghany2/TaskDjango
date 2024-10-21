@@ -35,7 +35,7 @@ http://165.232.126.71:8000/api/
 To access certain API endpoints, you need to authenticate as a user. Follow these steps to authenticate:
 
 1. **Login** to obtain the access token:
-   - **Endpoint:** `/login/`
+   - **Endpoint:** `api/login/`
    - **Method:** `POST`
    - **Body:**
    ```json
@@ -59,7 +59,7 @@ Authorization: Bearer your_access_token
 
 User Management
    ### Register a New User
-        Endpoint: /register/
+        Endpoint: api/register/
         Method: POST
         Body:
         ```json
@@ -84,12 +84,12 @@ User Management
 
 ## Book Management
    ### Get All Books
-        Endpoint: /books/
+        Endpoint: api/books/
         Method: GET
         Authorization: Required
         Response: Returns a list of books.
    ### Create a New Book
-        Endpoint: /books/
+        Endpoint: api/books/
         Method: POST
         Authorization: Required
         Body:
@@ -103,7 +103,7 @@ User Management
            }
 
    ### Update an Existing Book
-        Endpoint: /books/{id}/
+        Endpoint: api/books/{id}/
         Method: PATCH
         Authorization: Required
         Body:     
@@ -117,7 +117,7 @@ User Management
 
 
   ### Delete a Book
-        Endpoint: /books/{id}/
+        Endpoint: api/books/{id}/
         Method: DELETE
         Authorization: Required
         Response: Returns status code 204 No Content.     
@@ -125,7 +125,7 @@ User Management
 
   ### Borrow Management
         Borrow a Book
-        Endpoint: /borrow/
+        Endpoint: api/borrow/
         Method: POST
         Authorization: Required
         Body:
@@ -138,14 +138,15 @@ User Management
 
 
 
-   ## Reports
-        Get Borrowed Books Report
-        Endpoint: /reports/borrowed/
+## Reports
+   ### Get Borrowed Books Report
+        Endpoint: api/reports/borrowed/
         Method: GET
         Authorization: Admin Required
         Response: Returns a list of borrowed books.
-        Get Popular Books Report
-        Endpoint: /reports/popular/
+        
+   ### Get Popular Books Report
+        Endpoint: api/reports/popular/
         Method: GET
         Authorization: Admin Required
         Response: Returns a list of popular books.     
