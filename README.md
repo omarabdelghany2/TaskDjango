@@ -88,13 +88,13 @@ User Management
         Method: GET
         Authorization: Required
         Response: Returns a list of books.
-    Create a New Book
+   ### Create a New Book
         Endpoint: /books/
         Method: POST
         Authorization: Required
         Body:
-        ```json
         
+        ```json
            {
               "title": "New Book Title",
               "author": "Author Name",
