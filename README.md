@@ -43,7 +43,6 @@ User Management
         Endpoint: /register/
         Method: POST
         Body:
-        
         ```json
               
               {
@@ -57,7 +56,6 @@ User Management
         Endpoint: /login/
         Method: POST
          Body:
-         
          ```json
          
         {
@@ -76,7 +74,6 @@ Book Management
         Method: POST
         Authorization: Required
         Body:
-        
         ```json
         
            {
@@ -91,6 +88,8 @@ Book Management
         Method: PATCH
         Authorization: Required
         Body:     
+        ```json
+        
         {
           "title": "Updated Book Title",
           "author": "Updated Author Name"
