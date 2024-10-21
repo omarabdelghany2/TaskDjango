@@ -4,6 +4,21 @@
 Deployment URL :
 http://165.232.126.71:8000/
 
+
+
+Postman Collection
+
+A Postman collection is provided to facilitate testing of the API endpoints. You can import the collection and make requests as described above.
+
+How to Import the Postman Collection
+Open Postman.
+Click on "Import" in the top left corner.
+Select "Upload Files" and choose the exported Postman collection JSON file from MY repository.
+its name is :Royabackend-LibraryApp.postman_collection.json
+After importing, you will find all the defined API endpoints in your Postman workspace.
+The Postman collection includes examples for all available API endpoints, making it easy to test the functionalities without manual setup.
+
+
 ## Overview
 
 This documentation outlines the available API endpoints for the Roya Backend application. The API is built using Django REST Framework and provides functionalities for user authentication, book management, and borrowing reports.
@@ -138,15 +153,6 @@ Book Management
 
 
 
-Postman Collection
-
-A Postman collection is provided to facilitate testing of the API endpoints. You can import the collection and make requests as described above.
-
-How to Import the Postman Collection
-Open Postman.
-Click on "Import" in the top left corner.
-Select "Import From Link" and paste the link to the Postman collection file (if hosted online) or use "Upload Files" to upload the collection file directly.
-After importing, you will find all the defined API endpoints in your Postman workspace.
 
               
 

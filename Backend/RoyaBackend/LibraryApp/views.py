@@ -8,7 +8,8 @@ from .models import Book, Borrow
 from rest_framework import viewsets, permissions
 from .serializers import UserSerializer, BookSerializer, BorrowSerializer
 from django.contrib.auth.models import User
-
+from django.utils import timezone  # Make sure this is imported
+from django.db.models import Count
 
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
@@ -76,3 +77,10 @@ class PopularBooksReportView(APIView):
         ).order_by('-borrow_count')[:5]
         serializer = BookSerializer(popular_books, many=True)
         return Response(serializer.data)
+
+class BorrowHistoryView(APIView):
+    def get(self, request):
+        user = request.user
+        borrow_history = Borrow.objects.filter(user=user)
+        serializer = BorrowSerializer(borrow_history, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)

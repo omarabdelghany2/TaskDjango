@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "8adab7ff-cd96-4b16-b05a-9495dbb52ace",
+		"_postman_id": "74434614-42a6-4bea-9b8b-6c5bbf1736d4",
 		"name": "Royabackend/LibraryApp",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "25275945",
-		"_collection_link": "https://gold-trinity-679703.postman.co/workspace/Team-Workspace~2088ded3-af0f-456b-8b0c-70ba71bbeabb/collection/25275945-8adab7ff-cd96-4b16-b05a-9495dbb52ace?action=share&source=collection_link&creator=25275945"
+		"_collection_link": "https://gold-trinity-679703.postman.co/workspace/Team-Workspace~2088ded3-af0f-456b-8b0c-70ba71bbeabb/collection/25275945-74434614-42a6-4bea-9b8b-6c5bbf1736d4?action=share&source=collection_link&creator=25275945"
 	},
 	"item": [
 		{
@@ -21,22 +21,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://165.232.126.71:8000/api/login/",
-					"protocol": "http",
-					"host": [
-						"165",
-						"232",
-						"126",
-						"71"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"login",
-						""
-					]
-				}
+				"url": "http://165.232.126.71:8000/api/login/"
 			},
 			"response": []
 		},
@@ -47,35 +32,20 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTQxNjc4LCJpYXQiOjE3Mjk1NDEzNzgsImp0aSI6IjJjODg4Y2UyMmU3ZTQ4ZTdiMmFiMzZlZmVmNjI3ZDUzIiwidXNlcl9pZCI6MX0.jcK3I7S9yhv9NqEcV0qbXVDi-NzgzBFOrng_e9kCbHU",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTUxOTE3LCJpYXQiOjE3Mjk1NTE2MTcsImp0aSI6ImEyMDlmOGUxM2QyOTRkNGFhZTg2MTZhZmZlNDIzNzUyIiwidXNlcl9pZCI6MX0.1b7be0mhFdbTgZm62SqSN_3fyTok0MeJ3IguiEHbq9U",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"New Book Title\",\n    \"author\": \"Author Name\",\n    \"description\": \"This is a brief description of the new book.\",\n    \"available_copies\": 5\n}\n",
+					"raw": "{\n    \"title\": \"New Book Titleeee\",\n    \"author\": \"Author Name\",\n    \"description\": \"This is a brief description of the new book.\",\n    \"available_copies\": 5\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": {
-					"raw": "http://165.232.126.71:8000/api/books/",
-					"protocol": "http",
-					"host": [
-						"165",
-						"232",
-						"126",
-						"71"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"books",
-						""
-					]
-				}
+				"url": "http://165.232.126.71:8000/api/books/"
 			},
 			"response": []
 		},
@@ -84,22 +54,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://165.232.126.71:8000/api/books/",
-					"protocol": "http",
-					"host": [
-						"165",
-						"232",
-						"126",
-						"71"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"books",
-						""
-					]
-				}
+				"url": "http://165.232.126.71:8000/api/books/"
 			},
 			"response": []
 		},
@@ -108,23 +63,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://165.232.126.71:8000/api/books/{id}/",
-					"protocol": "http",
-					"host": [
-						"165",
-						"232",
-						"126",
-						"71"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"books",
-						"{id}",
-						""
-					]
-				}
+				"url": "http://165.232.126.71:8000/api/books/{id}/"
 			},
 			"response": []
 		},
@@ -135,7 +74,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTQxMTg5LCJpYXQiOjE3Mjk1NDA4ODksImp0aSI6IjJmYmQxMmM3NGFhMDQ4ZDk4ZjVjMTNhMTk2NGM0ODk3IiwidXNlcl9pZCI6MX0.5HFaMdO4BHBMW4uyy8fR6hsHysV-v_SzkNCD2q_MZvg",
+						"value": "Bearer <token>",
 						"type": "text"
 					}
 				],
@@ -148,23 +87,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://165.232.126.71:8000/api/books/{id}/",
-					"protocol": "http",
-					"host": [
-						"165",
-						"232",
-						"126",
-						"71"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"books",
-						"{id}",
-						""
-					]
-				}
+				"url": "http://165.232.126.71:8000/api/books/{id}/"
 			},
 			"response": []
 		},
@@ -175,7 +98,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTQxMTg5LCJpYXQiOjE3Mjk1NDA4ODksImp0aSI6IjJmYmQxMmM3NGFhMDQ4ZDk4ZjVjMTNhMTk2NGM0ODk3IiwidXNlcl9pZCI6MX0.5HFaMdO4BHBMW4uyy8fR6hsHysV-v_SzkNCD2q_MZvg",
+						"value": "Bearer <token>",
 						"type": "text"
 					}
 				],
@@ -188,23 +111,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://165.232.126.71:8000/api/books/{id}/",
-					"protocol": "http",
-					"host": [
-						"165",
-						"232",
-						"126",
-						"71"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"books",
-						"{id}",
-						""
-					]
-				}
+				"url": "http://165.232.126.71:8000/api/books/{id}/"
 			},
 			"response": []
 		},
@@ -215,27 +122,116 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTQxNjc4LCJpYXQiOjE3Mjk1NDEzNzgsImp0aSI6IjJjODg4Y2UyMmU3ZTQ4ZTdiMmFiMzZlZmVmNjI3ZDUzIiwidXNlcl9pZCI6MX0.jcK3I7S9yhv9NqEcV0qbXVDi-NzgzBFOrng_e9kCbHU",
+						"value": "Bearer <token>",
 						"type": "text"
 					}
 				],
-				"url": {
-					"raw": "http://165.232.126.71:8000/api/books/1/",
-					"protocol": "http",
-					"host": [
-						"165",
-						"232",
-						"126",
-						"71"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"books",
-						"1",
-						""
-					]
-				}
+				"url": "http://165.232.126.71:8000/api/books/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "Borrow a Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTUyNTAwLCJpYXQiOjE3Mjk1NTIyMDAsImp0aSI6IjliMTIwNWQ2N2VjNzQwNmM4YzA5OTA0NDY3MWQ1M2U4IiwidXNlcl9pZCI6MX0.izzJRJTvZOI0M1hR7Nn0fvh7gl9RJtMYDx8ZEaglUao",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\": 2\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://165.232.126.71:8000/api/borrow/"
+			},
+			"response": []
+		},
+		{
+			"name": "Return a Borrowed Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTUxOTE3LCJpYXQiOjE3Mjk1NTE2MTcsImp0aSI6ImEyMDlmOGUxM2QyOTRkNGFhZTg2MTZhZmZlNDIzNzUyIiwidXNlcl9pZCI6MX0.1b7be0mhFdbTgZm62SqSN_3fyTok0MeJ3IguiEHbq9U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\": 3\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://165.232.126.71:8000/api/return/"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Borrowing History",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTUyNTAwLCJpYXQiOjE3Mjk1NTIyMDAsImp0aSI6IjliMTIwNWQ2N2VjNzQwNmM4YzA5OTA0NDY3MWQ1M2U4IiwidXNlcl9pZCI6MX0.izzJRJTvZOI0M1hR7Nn0fvh7gl9RJtMYDx8ZEaglUao",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://165.232.126.71:8000/api/borrow/history/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Currently Borrowed Books Report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTUxOTE3LCJpYXQiOjE3Mjk1NTE2MTcsImp0aSI6ImEyMDlmOGUxM2QyOTRkNGFhZTg2MTZhZmZlNDIzNzUyIiwidXNlcl9pZCI6MX0.1b7be0mhFdbTgZm62SqSN_3fyTok0MeJ3IguiEHbq9U",
+						"type": "text"
+					}
+				],
+				"url": "http://165.232.126.71:8000/api/reports/borrowed/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Popular Books Report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTUxOTE3LCJpYXQiOjE3Mjk1NTE2MTcsImp0aSI6ImEyMDlmOGUxM2QyOTRkNGFhZTg2MTZhZmZlNDIzNzUyIiwidXNlcl9pZCI6MX0.1b7be0mhFdbTgZm62SqSN_3fyTok0MeJ3IguiEHbq9U",
+						"type": "text"
+					}
+				],
+				"url": "http://165.232.126.71:8000/api/reports/popular/"
 			},
 			"response": []
 		}
