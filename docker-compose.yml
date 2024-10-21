@@ -3,35 +3,36 @@
 services:
   web:
     build:
-      context: ./Backend  # Set the context to the Backend directory so it has access to Pipfile
+      context: ./Backend  # Set the context to the Backend directory to access the Pipfile
       dockerfile: RoyaBackend/Dockerfile  # Explicitly point to the Dockerfile inside RoyaBackEnd
-    container_name: roya_backend
+    container_name: roya_backend  # Name of the container for easier management
     volumes:
-      - ./Backend/RoyaBackend:/app
+      - ./Backend/RoyaBackend:/app  # Mount the application code into the container
     ports:
-      - "8000:8000"
+      - "8000:8000"  # Expose port 8000 for accessing the Django app
     depends_on:
-      - db
+      - db  # Ensure the database service starts before the web service
     command: >
-        sh -c "
-          pipenv install --skip-lock &&
-          pipenv run python manage.py makemigrations &&
-          pipenv run python manage.py migrate &&
-          pipenv run python manage.py collectstatic --noinput &&
-          pipenv run python manage.py runserver 0.0.0.0:8000
-        "
+      sh -c "
+        pipenv install --skip-lock &&  # Install dependencies without locking
+        pipenv run python manage.py makemigrations &&  # Create new migrations based on changes
+        pipenv run python manage.py migrate &&  # Apply database migrations
+        pipenv run python manage.py collectstatic --noinput &&  # Collect static files
+        pipenv run python manage.py runserver 0.0.0.0:8000  # Start the Django development server
+      "
 
   db:
-    image: postgres:13
-    container_name: roya_db
+    image: postgres:13  # Use the official PostgreSQL 13 image
+    container_name: roya_db  # Name of the database container
     environment:
-      POSTGRES_DB: mydatabase
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase  # Name of the database to create
+      POSTGRES_USER: myuser  # Database username
+      POSTGRES_PASSWORD: mypassword  # Database password
     ports:
-      - "5432:5432"
+      - "5432:5432"  # Expose PostgreSQL port
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data  # Persist database data between restarts
 
+# Define named volumes to persist data
 volumes:
   postgres_data:
