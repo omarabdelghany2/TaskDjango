@@ -43,11 +43,13 @@ User Management
         Endpoint: /register/
         Method: POST
         Body:
-        {
-            "username": "new_user",
-            "password": "new_password"
-        }
-        Response: Returns details of the created user.
+        ```json
+              
+              {
+                  "username": "new_user",
+                  "password": "new_password"
+              }
+              Response: Returns details of the created user.
   
   
   Login User
