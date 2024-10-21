@@ -1,3 +1,10 @@
+
+
+# YOU CAN TEST BY THE APIS BY POSTMAN AND test.py in django project
+1)test in django project by tests.py by entring the docker container and run python manage.py test LibraryApp and all tests will pass OK
+##LETS GO TO POST MAN TO TEST EVERY API THERE IS APOSTMAN Json file in the repo you can import it and test with it
+
+
 # API Documentation for Roya Backend
 
 
