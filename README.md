@@ -55,7 +55,9 @@ User Management
   Login User
         Endpoint: /login/
         Method: POST
-        Body:
+         Body:
+         ```json
+
         {
             "username": "your_username",
             "password": "your_password"
