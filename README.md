@@ -43,6 +43,7 @@ User Management
         Endpoint: /register/
         Method: POST
         Body:
+        
         ```json
               
               {
@@ -56,8 +57,9 @@ User Management
         Endpoint: /login/
         Method: POST
          Body:
+         
          ```json
-
+         
         {
             "username": "your_username",
             "password": "your_password"
@@ -74,12 +76,15 @@ Book Management
         Method: POST
         Authorization: Required
         Body:
-        {
-        "title": "New Book Title",
-        "author": "Author Name",
-        "description": "Description of the book.",
-        "available_copies": 5
-        }
+        
+        ```json
+        
+           {
+              "title": "New Book Title",
+              "author": "Author Name",
+              "description": "Description of the book.",
+              "available_copies": 5
+           }
 
    Update an Existing Book
         Endpoint: /books/{id}/
