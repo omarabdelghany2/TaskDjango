@@ -102,13 +102,13 @@ User Management
               "available_copies": 5
            }
 
-   Update an Existing Book
+   ### Update an Existing Book
         Endpoint: /books/{id}/
         Method: PATCH
         Authorization: Required
         Body:     
-        ```json
         
+        ```json
         {
           "title": "Updated Book Title",
           "author": "Updated Author Name"
@@ -116,21 +116,21 @@ User Management
         Response: Returns updated details of the book.
 
 
-   Delete a Book
+  ### Delete a Book
         Endpoint: /books/{id}/
         Method: DELETE
         Authorization: Required
         Response: Returns status code 204 No Content.     
 
 
-   Borrow Management
+  ### Borrow Management
         Borrow a Book
         Endpoint: /borrow/
         Method: POST
         Authorization: Required
         Body:
-        ```json
         
+        ```json
         {
            "book_id": 1
         }
@@ -138,7 +138,7 @@ User Management
 
 
 
-   Reports
+   ## Reports
         Get Borrowed Books Report
         Endpoint: /reports/borrowed/
         Method: GET
