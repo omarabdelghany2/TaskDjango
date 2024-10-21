@@ -8,6 +8,24 @@
 	},
 	"item": [
 		{
+			"name": "Register a new user.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"new_user\",\n    \"password\": \"new_password\",\n    \"email\": \"user@example.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://165.232.126.71:8000/api/register/"
+			},
+			"response": []
+		},
+		{
 			"name": "User Authentication",
 			"request": {
 				"method": "POST",
