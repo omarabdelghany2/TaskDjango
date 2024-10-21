@@ -6,6 +6,7 @@ class Book(models.Model):
     description = models.TextField()
     available_copies = models.IntegerField(default=1)
 
+
     def __str__(self):
         return self.title
 
@@ -18,6 +19,5 @@ class Borrow(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.book.title}"
-
 
 
