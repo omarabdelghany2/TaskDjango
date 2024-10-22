@@ -77,7 +77,8 @@ User Management
               
               {
                   "username": "new_user",
-                  "password": "new_password"
+                  "password": "new_password",
+                  "email":user@example.com
               }
               Response: Returns details of the created user.
   
