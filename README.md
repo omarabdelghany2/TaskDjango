@@ -1,4 +1,15 @@
-# API Documentation for Roya Backend
+Testing the APIs
+ou can test the APIs using Postman or the tests.py file within the Django project:
+
+1. Test with tests.py in the Django Project
+Enter the Docker container where your Django application is running.
+Run the following command to execute the tests:
+python manage.py test LibraryApp
+All tests should pass successfully.
+2. Test with Postman
+# API Documentation for Roya Backend supported by POSTMAN
+
+
 
 
 Deployment URL :
